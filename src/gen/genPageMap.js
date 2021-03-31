@@ -9,6 +9,8 @@ console.log(entries);
 entries = entries.map((item) => item.replace("./src/", "./"));
 let lines = [];
 
+lines.push("/**** DO NOT EDIT BY HAND! RUN `yarn gen:pageMap` ****/");
+lines.push("");
 lines.push(`export const pagesMap = {`);
 entries.forEach((item) => {
   let name = item.match(/^\.\/pages\/(.*)\.tsx$/)[1].toLocaleLowerCase();
